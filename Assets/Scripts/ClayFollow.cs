@@ -65,6 +65,7 @@ public class ClayFollow : MonoBehaviour
             isWalk = true;
             transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
         }
+
         else isWalk = false;      //test to see if it just rapidly sends to false again
 
     }

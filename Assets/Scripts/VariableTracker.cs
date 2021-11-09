@@ -17,6 +17,6 @@ public class VariableTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        search = (int) IH.story.variablesState["checked"];
+       // search = (int) IH.story.variablesState["checked"];
     }
 }

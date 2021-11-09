@@ -35,6 +35,7 @@ public class CollisionEvent : MonoBehaviour
                     if (interacted) //continue the story
                     {
                         iH.RefreshView();
+                        Debug.Log("hey interaction!!");
 
                     }
                     else //new phone who dis
