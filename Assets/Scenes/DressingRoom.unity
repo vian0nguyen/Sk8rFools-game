@@ -465,13 +465,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1474381077}
+  - component: {fileID: 1474381078}
   - component: {fileID: 1474381076}
   - component: {fileID: 1474381075}
   - component: {fileID: 1474381074}
   - component: {fileID: 1474381073}
   - component: {fileID: 1474381072}
   - component: {fileID: 1474381071}
-  - component: {fileID: 1474381078}
   m_Layer: 0
   m_Name: Q
   m_TagString: Player
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b61ad9d78dea944fbebe5978425ba35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limit: 1.44
+  limit: 2.53
   scale: 1.24
   scaleChange: 0
   pMove: {fileID: 1474381075}
