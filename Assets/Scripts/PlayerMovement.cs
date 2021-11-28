@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator QAnim;
 
+    public bool walk;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,9 +67,11 @@ public class PlayerMovement : MonoBehaviour
         if(velMag != 0)
         {
             QAnim.SetBool("isWalking", true);
+            walk = true;
             if (direction.normalized.y == 0 && direction.normalized.x == 0) {
               
                     QAnim.SetBool("isWalking", false);
+                walk = false;
                    
 
                     //goes when player is standing still AND with weird bug

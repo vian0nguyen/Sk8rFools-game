@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
+    <Compile Include="Assets\ScaleChange.cs" />
     <Compile Include="Assets\Scripts\ClayFollow.cs" />
     <Compile Include="Assets\Scripts\CollisionEvent.cs" />
     <Compile Include="Assets\Scripts\InkHandler.cs" />
