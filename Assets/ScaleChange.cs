@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ScaleChange : MonoBehaviour
 {
+    public float limit;
+    public float scale;
 
     public Transform tran;
-    public Vector3 scaleChange;
+    public float scaleChange;
+
     public PlayerMovement pMove; //might not need this if curr and change pos works
 
     // Start is called before the first frame update
@@ -17,12 +20,17 @@ public class ScaleChange : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        scaleChange = (transform.position.y + limit) * scale;
+        transform.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
+    }
     //TODO:
     //currently this solution is mega jank
     //need to find a cleaner way to map position to a toit scale range
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (pMove.walk == true) 
         {
@@ -40,10 +48,9 @@ public class ScaleChange : MonoBehaviour
                 //the object (should) get smaller
                 gameObject.transform.localScale -= scaleChange;
             }
-        }
-
-        
+        }*/
 
 
-    }
+
+
 }
