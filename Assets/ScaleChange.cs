@@ -7,7 +7,6 @@ public class ScaleChange : MonoBehaviour
     public float limit;
     public float scale;
 
-    public Transform tran;
     public float scaleChange;
 
     public PlayerMovement pMove; //might not need this if curr and change pos works
@@ -15,7 +14,6 @@ public class ScaleChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tran = gameObject.GetComponent<Transform>();
         pMove = GetComponent<PlayerMovement>();
 
     }
@@ -23,7 +21,7 @@ public class ScaleChange : MonoBehaviour
     private void Update()
     {
         scaleChange = (transform.position.y + limit) * scale;
-        transform.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
+        transform.localScale = new Vector3(scaleChange, scaleChange, transform.localScale.z);
     }
     //TODO:
     //currently this solution is mega jank
