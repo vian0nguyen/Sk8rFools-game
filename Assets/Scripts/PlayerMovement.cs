@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 Qdirection;
 
     public float velMag;
+    public int normalizedDir = 1; // positive is flipping as expected, negative is reversed
 
     public Animator QAnim;
 
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //QAnim.SetBool("isWalking", true);
 
-            if (direction.normalized.x == 1) spriteRenderer.flipX = false;
+            if (direction.normalized.x == normalizedDir) spriteRenderer.flipX = false;
             else spriteRenderer.flipX = true;
         }
        //else QAnim.SetBool("isWalking", false);
@@ -66,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
             QAnim.SetBool("isWalking", true);
             if (direction.normalized.y == 0 && direction.normalized.x == 0) {
               
-                   // Debug.Log("weird bug huh");
                     QAnim.SetBool("isWalking", false);
                    
 
