@@ -1,6 +1,19 @@
 # Sk8rFools-game
 code base for unity skaterfools game
 
+<details>
+<summary> ### FOR WHEN GIT POOPS OUT</summary>
+
+this should _theoretically_ work..
+
+1. open command prompt
+2. jump to directory command `popd` [source](https://blogs.umass.edu/Techbytes/2014/11/14/file-navigation-with-windows-command-prompt/) - if that doesn't work typing `D:` or whatever your disk name will get you to the right directory
+3. type `git add -a` (im pretty sure) - this just commits whatever is sitting in github that's presumably been screaming errors
+4. `git config --global core.autocrlf true` setting this makes the endings error go away.. maybe
+5. `git commit -a`
+6. write your commit message `<esc> [COMMIT MESSAGE HERE??] :wq <enter>` [source](https://stackoverflow.com/questions/13340329/how-to-save-a-git-commit-message-from-windows-cmd)
+ </details>
+
 # Dev Diary
 
 ### 21/11/08
