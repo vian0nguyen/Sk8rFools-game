@@ -16,6 +16,16 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+### 21/11/28
+ WOW!! I LOVE THIS GAMe i got in:
+ * sorting order code
+ * started a test scene for a dressing room feature (implimented a test mirror)
+ * have reverse controls for reflection effect in
+ * blocked by getting some scaling feature mapped to position.y to work 
+ 
+ corran assisted big time with trying to get the code `ScaleChange.cs` for this scaling to work properly.
+ the behavior we want is that as the position.y gets smaller the scale gets bigger and the reverse to have the effect that Q is stepping closer and further away from a mirror.
+ 
 ### 21/11/08
 
 TLDR TODO: 
