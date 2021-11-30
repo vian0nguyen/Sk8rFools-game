@@ -25,6 +25,7 @@ this should _theoretically_ work..
  1. Find all children (of Q) [link](https://forum.unity.com/threads/finding-all-children-of-object.453466/) [link](https://stackoverflow.com/questions/37943729/get-all-children-children-of-children-in-unity3d) -- also whats recursion??
  2. create an array/list from this
  3. cycle through the list <- how? mouse click? press space bar to cycle through list
+    A FOR LOOP, increment through the list every time input!!! WHOOOOA
 
  ### 21/11/28
  
