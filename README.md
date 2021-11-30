@@ -8,20 +8,32 @@ this should _theoretically_ work..
 
 1. open command prompt
 2. jump to directory command `popd` [source](https://blogs.umass.edu/Techbytes/2014/11/14/file-navigation-with-windows-command-prompt/) - if that doesn't work typing `D:` or whatever your disk name will get you to the right directory
-3. type `git add -a` (im pretty sure) - this just commits whatever is sitting in github that's presumably been screaming errors
+3. type `git add -A` (im pretty sure) - this just commits whatever is sitting in github that's presumably been screaming errors
 4. `git config --global core.autocrlf true` setting this makes the endings error go away.. maybe
-5. `git commit -a`
+5. `git commit -A`
 6. write your commit message `<esc> [COMMIT MESSAGE HERE??] :wq <enter>` [source](https://stackoverflow.com/questions/13340329/how-to-save-a-git-commit-message-from-windows-cmd)
  </details>
 
 # Dev Diary
 
-### 21/11/28
+ ### 21/11/28
+ 
+ preliminary research. i thought the code for the dress up section would be similar to the dysphoria doll game but i think that involved canvases in a way id like to avoid (overall mega messy and stressy)
+ 
+ thought process:
+ 
+ 1. Find all children (of Q) [link](https://forum.unity.com/threads/finding-all-children-of-object.453466/) [link](https://stackoverflow.com/questions/37943729/get-all-children-children-of-children-in-unity3d) -- also whats recursion??
+ 2. create an array/list from this
+ 3. cycle through the list <- how? mouse click? press space bar to cycle through list
+
+ ### 21/11/28
+ 
  WOW!! I LOVE THIS GAMe i got in:
  * sorting order code
  * started a test scene for a dressing room feature (implimented a test mirror)
  * have reverse controls for reflection effect in
  * blocked by getting some scaling feature mapped to position.y to work 
+(EDIT) that shit worked
  
  corran assisted big time with trying to get the code `ScaleChange.cs` for this scaling to work properly.
  the behavior we want is that as the position.y gets smaller the scale gets bigger and the reverse to have the effect that Q is stepping closer and further away from a mirror.
