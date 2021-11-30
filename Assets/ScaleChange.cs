@@ -20,7 +20,7 @@ public class ScaleChange : MonoBehaviour
 
     private void FixedUpdate()
     {
-        scaleChange = (transform.position.y + limit) * scale;
+        scaleChange = (transform.position.y - limit) * -scale;
         transform.localScale = new Vector3(scaleChange, scaleChange, transform.localScale.z);
     }
     //TODO:
