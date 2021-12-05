@@ -16,6 +16,16 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+ ### 21/12/05
+ 
+ GOT THE CLOSET CYCLING TO WORK!!!!! im a genius!!!
+ 
+ todo:
+ 
+ * BUG: cycling where its adding another list item which is the same as the start of the list
+ * BUG(if i bothered): wanna set custom loadIntoScene positions based on where you enter the skate shop [LINK](https://forum.unity.com/threads/load-scene-and-player-position.416434/)
+ * i keep forgetting i need an exit sign in the changing room
+ 
  ### 21/11/28
  
  preliminary research. i thought the code for the dress up section would be similar to the dysphoria doll game but i think that involved canvases in a way id like to avoid (overall mega messy and stressy)
