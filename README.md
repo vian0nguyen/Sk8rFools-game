@@ -20,6 +20,8 @@ this should _theoretically_ work..
  
  GOT THE CLOSET CYCLING TO WORK!!!!! im a genius!!!
  
+ i could probably use playerPrefs to save which hat you're wearing so you can wear it anywhere
+ 
  todo:
  
  * BUG: cycling where its adding another list item which is the same as the start of the list
