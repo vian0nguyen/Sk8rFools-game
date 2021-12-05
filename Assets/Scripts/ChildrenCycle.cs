@@ -55,7 +55,7 @@ public class ChildrenCycle : MonoBehaviour
 
         }
         //the sprite renderer finder
-        //bug its re-getting index 0
+        //BUG its re-getting index 0
         foreach (SpriteRenderer child in sprites)
         {
             //just sprite finder
