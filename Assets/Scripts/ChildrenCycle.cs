@@ -31,17 +31,16 @@ public class ChildrenCycle : MonoBehaviour
 
             // If Array count excedes Array index then go back to first position in array
             if (arrayCount > arrayLimit)
-            {
-                Debug.Log("too many!");
+            { 
                 arrayCount = 0;
             }
         }
     }
 
+    //only number finder
     public void RetrieveChildren()
     {
-        //only number finder
-        //int i = 0; //i think initiallizing i inside the function is setting it to always equal 0
+        
         //Array to hold all child obj
         GameObject[] allChildren = new GameObject[transform.childCount];
         arrayLimit = transform.childCount;
@@ -55,33 +54,31 @@ public class ChildrenCycle : MonoBehaviour
             
 
         }
-        //the sprite finder
-        // SpriteRenderer sprites = GetComponentInChildren<SpriteRenderer>();
+        //the sprite renderer finder
+        //bug its re-getting index 0
         foreach (SpriteRenderer child in sprites)
         {
             //just sprite finder
             var renderer = sprites[i].GetComponent<SpriteRenderer>();
             
-            //Add it to the list if it does
+            //Add it to the list if its a child and has the component
             if (renderer)
             {
                 sprites.Add(renderer);
             }
         }
-        Debug.Log("I found this many " + transform.childCount);
+
+        //Debug.Log("I found this many " + transform.childCount);
     }
 
     public void ChildrenCycler()
     {
         foreach (SpriteRenderer child in sprites)//turn off not selected
         {
-            child.enabled = false; //?
+            child.enabled = false; //hide all children
         }
 
-        sprites[arrayCount].enabled = true; //turns on the current selected
-                                            //var renderer = sprites[i].GetComponent<SpriteRenderer>();
-                                            //  sprites[arrayCount].enabled = true;
-        
+        sprites[arrayCount].enabled = true; //turns on the current 
         
     }
 }
