@@ -15,6 +15,14 @@ this should _theoretically_ work..
  </details>
 
 # Dev Diary
+ 
+ ### 21/12/13
+ 
+ todo:
+ 
+ * player pref hat saving
+ * player pref environment position saving
+ * implement art assets
 
  ### 21/12/05
  
