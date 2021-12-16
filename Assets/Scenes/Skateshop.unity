@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f5078ddcfe14906b78268029f39065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 343225218}
   interacted: 0
   pressed: 0
   SparkAnim: {fileID: 656425329}
