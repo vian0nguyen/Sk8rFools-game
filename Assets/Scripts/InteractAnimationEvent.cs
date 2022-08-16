@@ -54,7 +54,7 @@ public class InteractAnimationEvent : MonoBehaviour
                 SparkAnim.SetBool("isHover", true);
                 if (pressed==true)//DID U KNO? input needs to happen in update or else it fucky
                 {
-                    Debug.Log("pressing stop in stay");
+                  //  Debug.Log("pressing stop in stay");
                     SparkAnim.SetBool("isInteract", true);
                     if (isItem == true)
                     {

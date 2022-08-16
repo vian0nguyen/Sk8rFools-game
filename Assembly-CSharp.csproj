@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PlayerPositionSave.cs" />
     <Compile Include="Assets\Scripts\ScaleChange.cs" />
     <Compile Include="Assets\Scripts\SceneChange.cs" />
+    <Compile Include="Assets\Scripts\SceneChangeSavePP.cs" />
     <Compile Include="Assets\Scripts\SortOrder.cs" />
     <Compile Include="Assets\Scripts\VariableTracker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

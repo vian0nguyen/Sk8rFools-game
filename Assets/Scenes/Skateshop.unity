@@ -1233,6 +1233,11 @@ PrefabInstance:
       propertyPath: LoadScene
       value: DressingRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 8782243621483588960, guid: 39f50a296b5044c3b944956201324178,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8782243621483588962, guid: 39f50a296b5044c3b944956201324178,
         type: 3}
       propertyPath: m_Name
@@ -1676,6 +1681,23 @@ MonoBehaviour:
   SparkAnim: {fileID: 656425329}
   ItemAnim: {fileID: 0}
   isItem: 0
+--- !u!114 &1545613447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545613445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b28f9f94e321945a83dbf0df91a105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ppSave: {fileID: 0}
+  interacted: 0
+  LoadScene: 
+  pp: {fileID: 0}
 --- !u!4 &1545613451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8782243621483588954, guid: 39f50a296b5044c3b944956201324178,
@@ -1823,7 +1845,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -30
-  m_Sprite: {fileID: 21300000, guid: 569c02ba74322194b8e9cbb7e6e067c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f24b104c47256ff4daddc4c1aedb91f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2141,7 +2163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 663fd00ae91f260448753a0b409e4330, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a34dfec9fa5dbbb4d9a894a312cad499, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

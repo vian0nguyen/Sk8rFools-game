@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PierTOskate
   m_EditorClassIdentifier: 
   newScene_Position: {x: -2.5, y: -2.03}
-  checkpoint: 1
+  checkpoint: 0
