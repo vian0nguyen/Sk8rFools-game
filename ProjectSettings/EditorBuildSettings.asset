@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DressingRoom.unity
     guid: 2cd1c8159a9edd34db28c8c0f7d203d0
+  - enabled: 1
+    path: Assets/Scenes/KTKites.unity
+    guid: 4196265c5ea81284898543c3b7d7312f
   m_configObjects: {}
