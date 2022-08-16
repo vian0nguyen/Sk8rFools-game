@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\NPCInk.cs" />
     <Compile Include="Assets\Scripts\OverlapConvo.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerPosition.cs" />
     <Compile Include="Assets\Scripts\PlayerPositionSave.cs" />
     <Compile Include="Assets\Scripts\ScaleChange.cs" />
     <Compile Include="Assets\Scripts\SceneChange.cs" />

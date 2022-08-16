@@ -11,12 +11,19 @@ public class SceneChange : MonoBehaviour
     public bool interacted;
 
     public string LoadScene;
+    public PlayerPosition pp;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        ppSave = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPositionSave>();
+
+        if (pp.checkpoint == true)
+        {
+            print("checked");
+            player.transform.position = pp.newScene_Position;
+            pp.checkpoint = false;  //dont work
+        }
 
         //Select = GameObject.FindGameObjectWithTag("Select").GetComponent<SpriteRenderer>();
         //Select = gameObject.GetComponent<SpriteRenderer>();
@@ -32,12 +39,14 @@ public class SceneChange : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.Space))
                 {
-                  // Debug.Log("saving bro");
-                   ppSave.PositionSave();
-                    Debug.Log("space to enter door");
                     SceneManager.LoadScene(LoadScene);
+                    
 
                     interacted = true;
+                    pp.checkpoint = true;
+                    //pp.checkpoint = false;
+
+                    
                 }
             }
         }
