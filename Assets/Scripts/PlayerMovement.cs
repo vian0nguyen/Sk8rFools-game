@@ -21,12 +21,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool walk;
 
+    PlayerPositionSave ppData;
+
+ /* public void Awake()
+    {
+        ppData = FindObjectOfType<PlayerPositionSave>();
+        ppData.PlayerPosLoad();
+        Debug.Log("load player position");
+    }*/
+  
     // Start is called before the first frame update
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();  
     }
 
     private void FixedUpdate()

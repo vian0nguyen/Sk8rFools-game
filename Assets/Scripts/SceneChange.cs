@@ -22,14 +22,6 @@ public class SceneChange : MonoBehaviour
         //Select = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        if (ppSave == null) //this aint workin lol wont set the component when switching scenes? or when in a different scene
-        {
-            ppSave = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPositionSave>();
-        }
-    }
-
     void OnTriggerStay2D(Collider2D collision)
     {
         //Debug.Log("collisiion works :thumbs up:");
@@ -40,8 +32,8 @@ public class SceneChange : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.Space))
                 {
-                    Debug.Log("saving bro");
-                    ppSave.PositionSave();
+                  // Debug.Log("saving bro");
+                   ppSave.PositionSave();
                     Debug.Log("space to enter door");
                     SceneManager.LoadScene(LoadScene);
 

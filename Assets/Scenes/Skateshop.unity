@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 343225221}
   - component: {fileID: 343225220}
   - component: {fileID: 343225225}
+  - component: {fileID: 343225226}
   m_Layer: 0
   m_Name: Q
   m_TagString: Player
@@ -538,6 +539,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   render: {fileID: 343225224}
   scale: 5
+--- !u!114 &343225226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343225218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bbffb2276f8670498666440eef8ecc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  pX: 0
+  pY: 0
+  pZ: 0
 --- !u!1 &344015485
 GameObject:
   m_ObjectHideFlags: 0
