@@ -12,10 +12,9 @@ public class ChildrenCycle : MonoBehaviour
 
     private void Start()
     {
-        RetrieveChildren();
-        
-
         sprites = new List<SpriteRenderer>();
+        RetrieveChildren();
+
     }
 
     // Update is called once per frame
@@ -23,15 +22,16 @@ public class ChildrenCycle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("down " + arrayCount);
+            //Debug.Log("down " + arrayCount);
             ChildrenCycler();
 
             // Step to next position in array
             arrayCount++;
 
             // If Array count excedes Array index then go back to first position in array
-            if (arrayCount > arrayLimit)
-            { 
+            if (arrayCount >= arrayLimit)
+            {
+                //print("restart");
                 arrayCount = 0;
             }
         }
@@ -44,26 +44,28 @@ public class ChildrenCycle : MonoBehaviour
         //Array to hold all child obj
         GameObject[] allChildren = new GameObject[transform.childCount];
         arrayLimit = transform.childCount;
-
         //Find all child obj and store to that array
-        foreach (Transform child in transform)
+        for (int i = 0; i < arrayLimit; i++)
         {
             //just numbers
-            allChildren[i] = child.gameObject;
+            allChildren[i] = transform.GetChild(i).gameObject;//child.gameObject;
             arrayCount = i;
-            
+            print(allChildren[i].name);
+
 
         }
+
         //the sprite renderer finder
         //BUG its re-getting index 0
-        foreach (SpriteRenderer child in sprites)
+        foreach (GameObject hats in allChildren)
         {
             //just sprite finder
-            var renderer = sprites[i].GetComponent<SpriteRenderer>();
+            var renderer = hats.GetComponent<SpriteRenderer>();
             
             //Add it to the list if its a child and has the component
             if (renderer)
             {
+                print("sprite added");
                 sprites.Add(renderer);
             }
         }

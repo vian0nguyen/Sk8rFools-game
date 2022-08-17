@@ -1221,7 +1221,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pp
       value: 
-      objectReference: {fileID: 11400000, guid: df30bd5a1e2c5cc4b91f2b884033d95c,
+      objectReference: {fileID: 11400000, guid: dd4c561f3dc021f47998ae9c34d2849f,
         type: 2}
     - target: {fileID: 8782243621483588960, guid: 39f50a296b5044c3b944956201324178,
         type: 3}
@@ -1236,7 +1236,7 @@ PrefabInstance:
     - target: {fileID: 8782243621483588960, guid: 39f50a296b5044c3b944956201324178,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8782243621483588962, guid: 39f50a296b5044c3b944956201324178,
         type: 3}
@@ -1681,23 +1681,6 @@ MonoBehaviour:
   SparkAnim: {fileID: 656425329}
   ItemAnim: {fileID: 0}
   isItem: 0
---- !u!114 &1545613447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545613445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b28f9f94e321945a83dbf0df91a105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  ppSave: {fileID: 0}
-  interacted: 0
-  LoadScene: 
-  pp: {fileID: 0}
 --- !u!4 &1545613451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8782243621483588954, guid: 39f50a296b5044c3b944956201324178,

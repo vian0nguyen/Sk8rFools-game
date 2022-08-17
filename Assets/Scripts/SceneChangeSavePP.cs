@@ -38,7 +38,6 @@ public class SceneChangeSavePP : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     SceneManager.LoadScene(LoadScene);
-                    
 
                     interacted = true;
                     pp.checkpoint = true;

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public GameObject player;
-    public PlayerPositionSave ppSave;
+    //public PlayerPositionSave ppSave;
     //public SpriteRenderer Select;
     public bool interacted;
 
@@ -18,13 +18,20 @@ public class SceneChange : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
+
+
         if (pp.checkpoint == true)
         {
-            print("checked");
-            player.transform.position = pp.newScene_Position;
-            pp.checkpoint = false;  //dont work
+            if (pp.newScene_Position != null)
+            {
+                print("checked");
+                player.transform.position = pp.newScene_Position;
+                pp.checkpoint = false;  //dont work
+            }
+           
         }
-
+        
+       
         //Select = GameObject.FindGameObjectWithTag("Select").GetComponent<SpriteRenderer>();
         //Select = gameObject.GetComponent<SpriteRenderer>();
     }
