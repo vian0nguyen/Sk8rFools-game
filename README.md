@@ -15,6 +15,27 @@ this should _theoretically_ work..
  </details>
 
 # Dev Diary
+
+ ### 22/08/17
+ 
+ for the last few days i;ve been coming back to this project which is so exciting to be motivated again to work in it. problem solving in unity can be a pain in the ass but it really is so gratifying.
+ 
+ some things ive gotten done
+ 
+ * teleportation (BOTH clay and Q) + position saving SOOORTA
+ * scene transition
+ * cam transition
+ * asset implimentation (KT's interior and exterior, dressing room, rest of the beach front)
+ * made that exit sign in the dressing room :thumbs:
+ 
+ TODO:
+ 
+ * need more hats designed
+ * need to animate and think about pokey events, whats in the game and why? can we pick things up? maybe pokey is leaving a trail of something
+ * the figma file needs organization help
+ * KT interior needs objects seperated by layers if we want to interact and walk around
+ * NPC ANIMATION T- T
+ * dialog system..... hhhh sigh
  
  ### 21/12/13
  
