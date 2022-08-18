@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932fe22b4d2dbef4e87497475ea2a190, type: 3}
   m_Name: PierTOKTKite
   m_EditorClassIdentifier: 
-  newScene_Position: {x: -6.09, y: -5.22}
-  checkpoint: 0
+  newScene_Position: {x: 29.36, y: -105.91}
+  checkpoint: 1

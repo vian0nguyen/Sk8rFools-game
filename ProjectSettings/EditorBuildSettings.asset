@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KTKites.unity
     guid: 4196265c5ea81284898543c3b7d7312f
+  - enabled: 1
+    path: Assets/Scenes/Boardwalk_All.unity
+    guid: 458662e841a6b154abba05a39406bb68
   m_configObjects: {}

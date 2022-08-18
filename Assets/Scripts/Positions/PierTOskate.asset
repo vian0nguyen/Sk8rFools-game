@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932fe22b4d2dbef4e87497475ea2a190, type: 3}
   m_Name: PierTOskate
   m_EditorClassIdentifier: 
-  newScene_Position: {x: -2.5, y: -2.03}
+  newScene_Position: {x: -11.65, y: -107.9}
   checkpoint: 0
