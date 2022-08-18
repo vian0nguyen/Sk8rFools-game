@@ -52,7 +52,6 @@ public class ChildrenCycle : MonoBehaviour
             arrayCount = i;
             print(allChildren[i].name);
 
-
         }
 
         //the sprite renderer finder

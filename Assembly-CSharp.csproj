@@ -64,12 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\Cooldown.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Scripts\ChildrenCycle.cs" />
     <Compile Include="Assets\Scripts\ClayFollow.cs" />
     <Compile Include="Assets\Scripts\CollisionEvent.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InkHandler.cs" />
     <Compile Include="Assets\Scripts\InteractAnimationEvent.cs" />
     <Compile Include="Assets\Scripts\ItemInk.cs" />
@@ -82,8 +83,8 @@
     <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\SceneChangeSavePP.cs" />
     <Compile Include="Assets\Scripts\SortOrder.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\VariableTracker.cs" />
-    <Compile Include="Assets\Teleport.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
