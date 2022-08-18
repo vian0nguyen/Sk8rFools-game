@@ -16,6 +16,10 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+ ### 22/08/17 (an hr later)
+ 
+ stefan sat with me and made sure my code logic made sense and we made a cool down script to make sure the player wasnt doing double taps on accident
+ 
  ### 22/08/17
  
  for the last few days i;ve been coming back to this project which is so exciting to be motivated again to work in it. problem solving in unity can be a pain in the ass but it really is so gratifying.
