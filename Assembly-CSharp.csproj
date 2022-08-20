@@ -64,12 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Cooldown.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Demos\Basic Demo\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\Scripts\ChildrenCycle.cs" />
     <Compile Include="Assets\Scripts\ClayFollow.cs" />
     <Compile Include="Assets\Scripts\CollisionEvent.cs" />
+    <Compile Include="Assets\Scripts\Cooldown.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InkHandler.cs" />
     <Compile Include="Assets\Scripts\InteractAnimationEvent.cs" />

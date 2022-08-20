@@ -36,15 +36,15 @@ public class InkHandler : MonoBehaviour
             // Read all the content until we can't continue any more
             if (story.canContinue)
             {
-            //textBoxQ.enabled = true;
-            //textBoxClay.enabled = true;
+
                 // Continue gets the next line of the story
                 currentText = story.Continue();
 
                 // This removes any white space from the text.
                 currentText = currentText.Trim();
             // Display the text on screen!
-                CreateContentView(currentText); 
+                CreateContentView(currentText);
+            RunKnot(knotName);
 
             }
 
@@ -75,6 +75,13 @@ public class InkHandler : MonoBehaviour
             }
 
     }
+
+    //add to the handler a way to direct to ink knots in Unity Scripts
+    public void RunKnot(string knotName)
+    {
+        story.ChoosePathString(knotName);
+    }
+
     // When we click the choice button, tell the story to choose that choice!
     void OnClickChoiceButton(Choice choice)
     {
@@ -114,6 +121,8 @@ public class InkHandler : MonoBehaviour
         }
 
     }
+
+   
 
     // Creates a button showing the choice text
     Button CreateChoiceView(string text)
@@ -160,6 +169,7 @@ public class InkHandler : MonoBehaviour
     public Story story;
     public bool storyBegin;
     public string currentText;
+    public string knotName;
 
     public TMP_Text textBoxQ;
     public TMP_Text textBoxClay;

@@ -17,6 +17,11 @@ public class VariableTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // search = (int) IH.story.variablesState["checked"];
+        //how are we gonna decide what knots to show?
+        //maybe we call them in scene changes?
+       /* if ()
+        {
+            IH.knotName = "grill";
+        }*/
     }
 }

@@ -16,13 +16,17 @@ public class Teleport : MonoBehaviour
     public Vector2 followCoord;
 
     public CinemachineVirtualCamera prevcam, newcam;
-    
+
+    public InkHandler iH;
+    public string knotName;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         follower = GameObject.FindGameObjectWithTag("Clay");
         gm = GameObject.FindObjectOfType<GameManager>();
+        iH = GameManager.FindObjectOfType<InkHandler>();
 
 
     }
@@ -57,6 +61,8 @@ public class Teleport : MonoBehaviour
                
                     //print("interaction is" + interacted);
                     gm.Transition();
+                    
+                
 
                 //gm.SwitchPriority();
                 //PrioritySwitch();
@@ -69,7 +75,8 @@ public class Teleport : MonoBehaviour
                 player.transform.position = new Vector2(playerCoord.x, playerCoord.y);
                 follower.transform.position = new Vector2(followCoord.x, followCoord.y);
                 print(player.transform.position);
-                
+                iH.RunKnot(knotName); //somethings up wiht this guy //UNTESTED need an object in a "scene" after teleport
+
             }
 
         }
