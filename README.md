@@ -16,6 +16,17 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+ ### 22/08/20
+ 
+ KNOTS Directed via unity code!
+ 
+ here's how the system will work:
+ 
+ * save the knot name in the coords scriptable object 
+ * knotName will be changed in the teleportation code
+ * on entering a scene the knot for that scene will play a knot like "skateShop"
+ * after exiting the scene "after_[sceneName]" will play for all objects (NPCs, items, main)
+ 
  ### 22/08/17 (an hr later)
  
  stefan sat with me and made sure my code logic made sense and we made a cool down script to make sure the player wasnt doing double taps on accident
