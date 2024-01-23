@@ -6,5 +6,7 @@ using UnityEngine;
 public class ItemInk : MonoBehaviour
 {
     public TextAsset inkStory;
+    //store string to push along VAR counter? or define knotname
+    public string knotname;
 
 }

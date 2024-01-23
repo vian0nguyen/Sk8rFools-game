@@ -17,6 +17,7 @@ public class InkHandler : MonoBehaviour
     {
         RemoveChildren();
         StartStory();
+        
     }
 
     // Creates a new Story object with the compiled story which we can then play!
@@ -31,25 +32,33 @@ public class InkHandler : MonoBehaviour
         // Remove all the UI on screen
       RemoveChildren();
 
+            Debug.Log("u can start :thumbs up:");
 
-            //Debug.Log("u can start :thumbs up:");
-            // Read all the content until we can't continue any more
-            if (story.canContinue)
+        // Read all the content until we can't continue any more
+        //this kinda works in that it will search for knot names or otherwise print only unknotted content
+        //unknotted content will always print FIRST
+        //have a default string + idle text to go to when not directing knot
+        if (story.canContinue)
             {
+            storyBegin = true;
+            Debug.Log("can story begin? "+storyBegin);
 
-                // Continue gets the next line of the story
-                currentText = story.Continue();
+            // Continue gets the next line of the story
+            currentText = story.Continue();
 
                 // This removes any white space from the text.
                 currentText = currentText.Trim();
             // Display the text on screen!
-                CreateContentView(currentText);
+            CreateContentView(currentText);
+
+            }else 
+        { 
             RunKnot(knotName);
+            storyBegin = true;
+        }
 
-            }
-
-            // Display all the choices, if there are any!
-            if (story.currentChoices.Count > 0)
+        // Display all the choices, if there are any!
+        if (story.currentChoices.Count > 0)
             {
                 for (int i = 0; i < story.currentChoices.Count; i++)
                 {
@@ -72,7 +81,9 @@ public class InkHandler : MonoBehaviour
             //});
 
             RemoveChildren();
-            }
+            storyBegin = false;
+            Debug.Log("can story begin? " + storyBegin);
+        }
 
     }
 

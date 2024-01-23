@@ -16,6 +16,14 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+### 24/01/23
+
+Hello its been a while. i futzed around with the code. I'm thinking through the quest system still. I forgot to check below to see what I was thinking.
+
+I think the below system might not work? I'm thinking through if a search and "jump to scene" system would work better.
+
+could possibly use save VAR system, to recall where the player is at with the quest and do a conditional so we can track where the player has already been while giving them the flexibility to complete searches without getting hints.
+
  ### 22/08/20
  
  KNOTS Directed via unity code!

@@ -2006,6 +2006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkStory: {fileID: 4900000, guid: c008c823fbaed4fcb97b233b7b2f8d75, type: 3}
+  knotname: 
 --- !u!1 &538495255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3212,7 @@ GameObject:
   - component: {fileID: 774807849}
   - component: {fileID: 774807848}
   - component: {fileID: 774807847}
+  - component: {fileID: 774807851}
   m_Layer: 0
   m_Name: StoryManager
   m_TagString: Untagged
@@ -3231,6 +3233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IH: {fileID: 774807849}
+  name: first_time
   search: 0
 --- !u!114 &774807848
 MonoBehaviour:
@@ -3259,7 +3262,7 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: d6cd584d300254856881db564ffd23a4, type: 3}
   storyBegin: 0
   currentText: 
-  knotName: 
+  knotName: rude
   textBoxQ: {fileID: 1609641963}
   textBoxClay: {fileID: 1395455210}
   textBoxNPC: {fileID: 13730612}
@@ -3280,6 +3283,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774807851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774807846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5609e0aec81d8b9418d9e880729a44e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IH: {fileID: 774807849}
+  health: 0
 --- !u!1001 &824011480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5924,6 +5941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkStory: {fileID: 4900000, guid: 17763e4d94d9e9641a98df4af09b38c8, type: 3}
+  knotname: 
 --- !u!212 &1372477672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9440,6 +9458,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1325484546}
     m_Modifications:
+    - target: {fileID: 343164637, guid: 5072f914fdd9a46e0a2370758d4e0dce, type: 3}
+      propertyPath: knotname
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2268320094877465701, guid: 5072f914fdd9a46e0a2370758d4e0dce,
         type: 3}
       propertyPath: m_Offset.y
