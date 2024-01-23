@@ -24,6 +24,13 @@ I think the below system might not work? I'm thinking through if a search and "j
 
 could possibly use save VAR system, to recall where the player is at with the quest and do a conditional so we can track where the player has already been while giving them the flexibility to complete searches without getting hints.
 
+things id like:
+* have the player freeze position until their done talking
+* get global unity variables working (and changing them from ink stories)
+* need to make a list of needed assets (NPC for Kite_shop, skate_shop, etc)
+* make a list of assets already made that is ready to be implemented
+* need to maybe prototype the sequence of seeking and hiding logic
+
  ### 22/08/20
  
  KNOTS Directed via unity code!
