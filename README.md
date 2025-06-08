@@ -16,6 +16,23 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+### 25/06/08
+
+finally sat down and thought about the whole adventure part of this game
+
+<details>
+<summary> Player path, linear narrative gameplay</summary>
+
+this should _theoretically_ work..
+
+1. START: home! we discover pokey is gone. _clue_: a missing wheel from skateboard, another is slobbery
+2. skate shop _clue_: try on clothes, find ice cream and pokey fur and slobber
+3. (optional) alligator grill: they sell ice cream but NO, cones are from mr scoops specifically
+4. mr. scoops stand _clue_: "that dog loves to take cones to bait seagulls and chase them"
+5. beach/further along board walk _clue_: behind a pole or potted plant, we spot pokey's waggy tail! --> turns out to be a kite!
+6. Kite shop! we return the kite and pokey was chillin with his bud poppy in the back.
+ </details>
+
 ### 24/01/23
 
 Hello its been a while. i futzed around with the code. I'm thinking through the quest system still. I forgot to check below to see what I was thinking.
