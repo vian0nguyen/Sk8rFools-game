@@ -248,14 +248,14 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>C:/Users/jubnu/Documents/gbgd1/Sk8rFools-game/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Users/jubnu/Documents/gbgd1/Sk8rFools-game/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>C:/Users/jubnu/Documents/gbgd1/Sk8rFools-game/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/jubnu/Documents/gbgd1/Sk8rFools-game/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/jubnu/Documents/gbgd1/Sk8rFools-game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -636,9 +636,25 @@
       <Project>{94D90C63-BA88-989E-AB76-6273DB7A0954}</Project>
       <Name>Cinemachine</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.Monetization.csproj">
+      <Project>{EEA56E9E-C42A-3BD7-0840-A46821417721}</Project>
+      <Name>UnityEngine.Monetization</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{7C856D13-C007-3446-0461-67A2B24EF690}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{DA4AB8C4-E62A-8936-54C0-68FEC6EAA22C}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Purchasing.csproj">
+      <Project>{4E9D5489-757A-EB9C-BB60-4187853361E2}</Project>
+      <Name>UnityEngine.Purchasing</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.Purchasing.csproj">
+      <Project>{52F75AD4-F0DB-6B58-E6B2-84A13BD329A6}</Project>
+      <Name>UnityEditor.Purchasing</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{01C95B3B-CF09-0840-0F75-73166FF57DEE}</Project>
@@ -672,45 +688,29 @@
       <Project>{20823561-2A33-9B5C-04A8-4CF4F7B7B3A2}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{4F29D525-038C-D118-3631-11FE7344CC32}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{502A04C3-0716-4F8B-E1B4-4CB860767EDF}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{CFF78CCB-2AD7-6FD8-AA19-C29A2D9DB409}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{EEA56E9E-C42A-3BD7-0840-A46821417721}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{DA4AB8C4-E62A-8936-54C0-68FEC6EAA22C}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.csproj">
-      <Project>{4E9D5489-757A-EB9C-BB60-4187853361E2}</Project>
-      <Name>UnityEngine.Purchasing</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.Purchasing.csproj">
-      <Project>{52F75AD4-F0DB-6B58-E6B2-84A13BD329A6}</Project>
-      <Name>UnityEditor.Purchasing</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{7E987DD9-BF04-539C-7264-15B16B159E99}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{4F29D525-038C-D118-3631-11FE7344CC32}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
       <Project>{F7963FD6-6F3F-29DE-2B3D-B06C9C63400C}</Project>
       <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{502A04C3-0716-4F8B-E1B4-4CB860767EDF}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
       <Project>{37E92549-78A8-AA48-38BA-0AA7D731655F}</Project>
       <Name>Unity.Analytics.DataPrivacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{CFF78CCB-2AD7-6FD8-AA19-C29A2D9DB409}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
