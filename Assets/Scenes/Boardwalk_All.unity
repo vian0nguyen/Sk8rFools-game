@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overworldCam: 1
-  wait: 1
+  wait: 1.5
   fade: {fileID: 721498505}
 --- !u!4 &271439890
 Transform:
@@ -4698,7 +4698,6 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   Qdirection: {x: 0, y: 0}
   velMag: 0
-  normalizedDir: 1
   QAnim: {fileID: 964183700}
   walk: 0
 --- !u!70 &964183699
