@@ -44,10 +44,10 @@ public class ClayFollow : MonoBehaviour
         {
             Flip();
         }
-        if ((pmovement.Qdirection.y - direction.y) != 0)
+        /*if ((pmovement.Qdirection.y - direction.y) != 0)
         {
-            Order();
-        }
+            //Order();
+        } <-Removed because we have y sorting now*/
 
 
         // lastPosition = transform.position;   //part of a inprog solution
@@ -86,7 +86,7 @@ public class ClayFollow : MonoBehaviour
     }
 
 
-    public void Order()//check's if one is behind or in front and changes the order in layer
+    /*public void Order()//check's if one is behind or in front and changes the order in layer
     {//gotta make a function vers of this but for all objects in q and clay's area of effect
      
         if ((pmovement.Qdirection.y - direction.y) >= 0)
@@ -99,5 +99,5 @@ public class ClayFollow : MonoBehaviour
                 spriteRenderer.sortingOrder = 9; 
             }
             
-        }
+        } <- Removed because we have y sorting now*/
 }

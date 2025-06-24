@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 Qdirection;
 
     public float velMag;
-    public int normalizedDir = 1; // positive is flipping as expected, negative is reversed
+    //public int normalizedDir = 1; // positive is flipping as expected, negative is reversed <- Removed due to this causing issues where holding down up/down while moving right flips the sprite
 
     public Animator QAnim;
 
@@ -40,16 +40,16 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         
-        rb2d.velocity = new Vector2(Input.GetAxis("Horizontal") * XSpeed, Input.GetAxis("Vertical") * YSpeed);
-        direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
+        rb2d.velocity = new Vector2(direction.x * XSpeed, direction.y * YSpeed);
+
         velMag = rb2d.velocity.magnitude;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        direction.x = Input.GetAxisRaw("Horizontal");
+        direction.y = Input.GetAxisRaw("Vertical");
         Anim();
         Flip();
         //VertMove();           //animation doesnt play if x stays the same
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //QAnim.SetBool("isWalking", true);
 
-            if (direction.normalized.x == normalizedDir) spriteRenderer.flipX = false;
+            if (direction.normalized.x > 0) spriteRenderer.flipX = false;
             else spriteRenderer.flipX = true;
         }
        //else QAnim.SetBool("isWalking", false);
