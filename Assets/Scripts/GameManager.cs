@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public float wait;
     public GameObject fade;
 
+    public int arc = 0;
+
+    public DialogueManager dm;
+
     // Start is called before the first frame update
     void Start()
     {

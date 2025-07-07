@@ -7,12 +7,16 @@ public class InteractAnimationEvent : MonoBehaviour
     public GameObject player;
     //public SpriteRenderer Select;
     public bool interacted;
-    public bool pressed;
     public Animator SparkAnim;
     public Animator ItemAnim;
     //make a thing for NPC talking anim?? 
 
+    public NPCDialogueScriptable dialogueScriptable;
+    public int timesInteracted = 0;
+
     public bool isItem;
+
+    //move all interaction stuff to player input script
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +26,6 @@ public class InteractAnimationEvent : MonoBehaviour
         //Select = GameObject.FindGameObjectWithTag("Select").GetComponent<SpriteRenderer>();
         //Select = gameObject.GetComponent<SpriteRenderer>();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)){ pressed = true; }
-        else if (Input.GetKeyUp(KeyCode.Space)){ pressed = false; }
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("collisiion works :thumbs up:");
@@ -43,7 +40,7 @@ public class InteractAnimationEvent : MonoBehaviour
         }
 
     }
-    void OnTriggerStay2D(Collider2D collision)
+    /*void OnTriggerStay2D(Collider2D collision)
     {
         //Debug.Log("collisiion works :thumbs up:");
 
@@ -54,18 +51,11 @@ public class InteractAnimationEvent : MonoBehaviour
                 SparkAnim.SetBool("isHover", true);
                 if (pressed==true)//DID U KNO? input needs to happen in update or else it fucky
                 {
-                  //  Debug.Log("pressing stop in stay");
-                    SparkAnim.SetBool("isInteract", true);
-                    if (isItem == true)
-                    {
-                        ItemAnim.SetBool("isInteract", true);
-                    }
-                    interacted = true;
+                 
                 }
             }
         }
-    }
-
+    }*/
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -79,5 +69,15 @@ public class InteractAnimationEvent : MonoBehaviour
             }
             interacted = false;
         }
+    }
+
+    public void SetTalkingState(){
+         //  Debug.Log("pressing stop in stay");
+        SparkAnim.SetBool("isInteract", true);
+        if (isItem == true)
+        {
+            ItemAnim.SetBool("isInteract", true);
+        }
+        timesInteracted++;
     }
 }

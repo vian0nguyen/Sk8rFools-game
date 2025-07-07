@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     //OK so if we wanted to move Q using click interaction http://unity.grogansoft.com/move-player-to-clicktouch-position/
 
+    public GameManager gm;
+
     private Rigidbody2D rb2d;
     public float XSpeed;
     public float YSpeed;
@@ -19,9 +21,13 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator QAnim;
 
-    public bool walk;
-
     PlayerPositionSave ppData;
+
+    public enum playerStates{
+        isWalking,
+        isTalking
+    }
+    public playerStates state;
 
  /* public void Awake()
     {
@@ -39,10 +45,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        rb2d.velocity = new Vector2(direction.x * XSpeed, direction.y * YSpeed);
-
-        velMag = rb2d.velocity.magnitude;
+        //checks if the player is walking and then sets their walking velocity
+        if(state == playerStates.isWalking){
+            rb2d.velocity = new Vector2(direction.x * XSpeed, direction.y * YSpeed);
+            velMag = rb2d.velocity.magnitude;
+        }
     }
 
     // Update is called once per frame
@@ -50,6 +57,21 @@ public class PlayerMovement : MonoBehaviour
     {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
+        
+        switch (state){
+            case playerStates.isWalking:
+                if (Input.GetKeyDown(KeyCode.Space)){ 
+                    gm.dm.GetCurrentNPC().SetTalkingState();
+                    state = playerStates.isTalking;
+                }
+                break;
+            case playerStates.isTalking:
+                if (Input.GetKeyDown(KeyCode.Space)){ 
+
+                }
+                break;
+        }
+        //else if (Input.GetKeyUp(KeyCode.Space)){ pressed = false; }
         Anim();
         Flip();
         //VertMove();           //animation doesnt play if x stays the same
@@ -75,11 +97,9 @@ public class PlayerMovement : MonoBehaviour
         if(velMag != 0)
         {
             QAnim.SetBool("isWalking", true);
-            walk = true;
             if (direction.normalized.y == 0 && direction.normalized.x == 0) {
               
                     QAnim.SetBool("isWalking", false);
-                walk = false;
                    
 
                     //goes when player is standing still AND with weird bug
@@ -93,7 +113,19 @@ public class PlayerMovement : MonoBehaviour
 
         }
         else QAnim.SetBool("isWalking", false);
+    }
 
+    void OnTriggerEnter2D(Collider2D col){
+        
+        if(col.gameObject.tag == "Item" && col.gameObject.TryGetComponent<InteractAnimationEvent>(out InteractAnimationEvent npc)){
+            gm.dm.talkableNPCS.Add(npc);
+        }
+    }
 
+    void OnTriggerExit2D(Collider2D col){
+        
+        if(col.gameObject.tag == "Item" && col.gameObject.TryGetComponent<InteractAnimationEvent>(out InteractAnimationEvent npc)){
+            gm.dm.talkableNPCS.Remove(npc);
+        }
     }
 }
