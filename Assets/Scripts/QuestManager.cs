@@ -17,6 +17,11 @@ public class QuestManager : MonoBehaviour
     [SerializeField]
     public QuestScript[] quests;
 
+    public enum itemsCheck
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +43,8 @@ public class QuestManager : MonoBehaviour
     public void UpdateQuestDict(){
         foreach (QuestScript quest in quests)
         {
-            questDict[quest.questID].status = quest.status;
+            questDict[quest.questInfo.questID].status = quest.status;
+            
         }
     }
 }
