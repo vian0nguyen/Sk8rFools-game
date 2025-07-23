@@ -4,6 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class InkHandler : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class InkHandler : MonoBehaviour
     public void StartStory()
     {
         story = new Story(inkJSONAsset.text);
+        OnDialogueStart.Invoke();
        // if (OnCreateStory != null) OnCreateStory(story);
         RefreshView();
     }
@@ -31,8 +33,6 @@ public class InkHandler : MonoBehaviour
     {
         // Remove all the UI on screen
       RemoveChildren();
-
-            Debug.Log("u can start :thumbs up:");
 
         // Read all the content until we can't continue any more
         //this kinda works in that it will search for knot names or otherwise print only unknotted content
@@ -51,7 +51,8 @@ public class InkHandler : MonoBehaviour
             // Display the text on screen!
             CreateContentView(currentText);
 
-            }else 
+        }
+        else 
         { 
             RunKnot(knotName);
             storyBegin = true;
@@ -83,6 +84,8 @@ public class InkHandler : MonoBehaviour
             RemoveChildren();
             storyBegin = false;
             Debug.Log("can story begin? " + storyBegin);
+            //clear out dialogue boxes
+            OnDialogueEnd.Invoke();
         }
 
     }
@@ -113,7 +116,8 @@ public class InkHandler : MonoBehaviour
             {
                 textBoxQ.text = text;
                 textBoxClay.text = "";
-            }else if(tags.Contains("clay")){
+            }
+            else if(tags.Contains("clay")){
                 textBoxClay.text = text;
                 textBoxQ.text = "";//blank strings so they dont interrupt each other
             }
@@ -123,11 +127,10 @@ public class InkHandler : MonoBehaviour
                 textBoxQ.text = "";
                 textBoxClay.text = "";
             }
-
+            CheckTags();
         }
         else
         {
-            
             textBoxQ.text = text; //assume tagless text is q
         }
 
@@ -170,9 +173,56 @@ public class InkHandler : MonoBehaviour
         {
             GameObject.Destroy(canvas.transform.GetChild(i).gameObject);
         }
-
-
     }
+
+    #region Tags
+    //checks tags of current line of dialogue for events
+    void CheckTags()
+    {
+        //runs through all current tags
+        foreach (string tag in story.currentTags)
+        {
+
+            //this method allows anyone to edit what happens when a tag is called in the inspector
+            //runs through each tag in the tag list
+            foreach (Tag tagCheck in Tags)
+            {
+                //checks if the tag contains a certain marker from the tag list
+                if (tag.Contains(tagCheck.marker))
+                {
+                    //calls whatever method(s) occur when this tag is called and passes the tag data through
+                    tagCheck.TagFunctions.Invoke(GetTagData(tag));
+                    //stops the loop
+                    break;
+                }
+            }
+        }
+    }
+
+    //takes data from the marked tag and returns it as a value
+    string GetTagData(string tag)
+    {
+        //removes the marking from the string in the tag
+        string tagData = tag.Remove(0, 1);
+
+        if (!string.IsNullOrEmpty(tagData))
+            return tagData;
+
+        else
+        {
+            return (null);
+        }
+    }
+    #endregion
+
+    //function for testing events
+    public void DebugMessage(string message)
+    {
+        Debug.Log(message);
+    }
+    
+    public GameManager gm;
+    public QuestManager qm;
 
     [SerializeField]
     public TextAsset inkJSONAsset = null;
@@ -196,5 +246,28 @@ public class InkHandler : MonoBehaviour
    // private TMP_Text textPrefab = null;
     [SerializeField]
     private Button buttonPrefab = null;
+
+    [Header("Events")]
+    public UnityEvent OnDialogueStart;
+    public UnityEvent OnLineEnd;
+    public UnityEvent OnDialogueEnd;
+
+    
+
+    [Header("Tag List")]
+    public Tag[] Tags;
+
+    [System.Serializable]
+    public struct Tag
+    {
+        public string marker;
+        public TagFunctions TagFunctions;
+    }
+    
+    //This class is only here so that an event that takes a string value parameter shows up in the inspector
+    [System.Serializable]
+    public class TagFunctions : UnityEvent<string>
+    {
+    }
 }
 

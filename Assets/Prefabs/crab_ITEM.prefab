@@ -263,9 +263,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2268320094877465721}
   interacted: 0
-  pressed: 0
   SparkAnim: {fileID: 2268320096143359809}
   ItemAnim: {fileID: 2268320094877465699}
+  dialogueScriptable: {fileID: 0}
+  timesInteracted: 0
+  textBox: {fileID: 4804918852133500342}
   isItem: 1
 --- !u!114 &343164637
 MonoBehaviour:
@@ -280,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkStory: {fileID: 4900000, guid: bfdfb527b056243d0b67b7302f8b3009, type: 3}
-  knotname:
+  knotname: 
 --- !u!1 &2268320096143359811
 GameObject:
   m_ObjectHideFlags: 0

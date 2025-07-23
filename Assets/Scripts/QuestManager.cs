@@ -22,10 +22,20 @@ public class QuestManager : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        questDict = new Dictionary<string, QuestScript>();
+
+        foreach (QuestScript quest in quests)
+        {
+            questDict.Add(quest.questInfo.questID, quest);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        IH.story.variablesState["player_health"] = 100;
+        //IH.story.variablesState["player_health"] = 100;
 
         
     }
@@ -34,17 +44,28 @@ public class QuestManager : MonoBehaviour
     {
         //health = (int)IH.story.variablesState["player_health"];
     }
-
-    public virtual void UpdateQuest(string questID, QuestScript.questStatus status){
-        UpdateQuestDict();
-    }
     
     //syncs quest dictionary with displayed quests
     public void UpdateQuestDict(){
         foreach (QuestScript quest in quests)
         {
             questDict[quest.questInfo.questID].status = quest.status;
-            
         }
+    }
+
+    //functions for starting/progressing/completing quests (written here because each quest might have different stuff triggered when those events happen
+    public void StartQuest(string questID)
+    {
+        questDict[questID].QuestStart();
+    }
+
+    public void ProgressQuest(string questID)
+    {
+        questDict[questID].ProgressQuest();
+    }
+
+    public void CompleteQuest(string questID)
+    {
+        questDict[questID].QuestComplete();
     }
 }

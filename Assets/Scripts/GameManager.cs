@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int arc = 0;
 
     public DialogueManager dm;
+    public NPCManager npcManager;
 
     // Start is called before the first frame update
     void Start()

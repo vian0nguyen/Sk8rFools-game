@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InteractAnimationEvent : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class InteractAnimationEvent : MonoBehaviour
 
     public NPCDialogueScriptable dialogueScriptable;
     public int timesInteracted = 0;
+
+    public TMP_Text textBox;
 
     public bool isItem;
 

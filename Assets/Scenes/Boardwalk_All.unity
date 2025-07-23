@@ -446,6 +446,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!114 &132577305
 MonoBehaviour:
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   fade: {fileID: 721498505}
   arc: 0
   dm: {fileID: 774807852}
+  npcManager: {fileID: 774807853}
 --- !u!4 &271439890
 Transform:
   m_ObjectHideFlags: 0
@@ -2067,6 +2069,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &565141060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5269694658407350156, guid: 52abf027abe3ed6499b5e8d824cd8c14,
+    type: 3}
+  m_PrefabInstance: {fileID: 4331319450987951218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9613c5b044c44bea641d90d1742b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &566588711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2268320094877465702, guid: 5072f914fdd9a46e0a2370758d4e0dce,
@@ -3271,6 +3285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2822998df55e4691b5ae87d0501cbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 271439889}
+  qm: {fileID: 0}
   inkJSONAsset: {fileID: 4900000, guid: d6cd584d300254856881db564ffd23a4, type: 3}
   storyBegin: 0
   currentText: 
@@ -3281,6 +3297,116 @@ MonoBehaviour:
   canvas: {fileID: 123899813}
   buttonPrefab: {fileID: 184628481539350062, guid: 01453b104735d4d01b8342d25fb8f2da,
     type: 3}
+  OnDialogueStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774807849}
+        m_MethodName: DebugMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dialogue has begun!
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLineEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDialogueEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774807849}
+        m_MethodName: DebugMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dialogue has ended!
+          m_BoolArgument: 0
+        m_CallState: 2
+  Tags:
+  - marker: '*'
+    TagFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774807851}
+          m_MethodName: StartQuest
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 774807849}
+          m_MethodName: DebugMessage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Quest started!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - marker: '?'
+    TagFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774807851}
+          m_MethodName: ProgressQuest
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 774807849}
+          m_MethodName: DebugMessage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Quest Progressed!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - marker: ^
+    TagFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774807851}
+          m_MethodName: CompleteQuest
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 774807849}
+          m_MethodName: DebugMessage
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Quest Complete!
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &774807850
 Transform:
   m_ObjectHideFlags: 0
@@ -3311,7 +3437,7 @@ MonoBehaviour:
   IH: {fileID: 774807849}
   health: 0
   quests:
-  - {fileID: 0}
+  - {fileID: 565141060}
 --- !u!114 &774807852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4743,10 +4869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9beffdd53727a4889810206f381407f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
+  gm: {fileID: 271439889}
   XSpeed: 5
   YSpeed: 5
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 964183695}
   direction: {x: 0, y: 0}
   Qdirection: {x: 0, y: 0}
   velMag: 0
@@ -4848,7 +4974,7 @@ PrefabInstance:
     - target: {fileID: 343164637, guid: 5072f914fdd9a46e0a2370758d4e0dce, type: 3}
       propertyPath: inkStory
       value: 
-      objectReference: {fileID: 4900000, guid: bdbccc35fb66c47d98a90de58254e74c, type: 3}
+      objectReference: {fileID: 4900000, guid: e6596906cc00a3442a4c4ebeb4bb7a36, type: 3}
     - target: {fileID: 2268320094877465699, guid: 5072f914fdd9a46e0a2370758d4e0dce,
         type: 3}
       propertyPath: m_Controller
@@ -5043,6 +5169,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!114 &1015908453
 MonoBehaviour:
@@ -5507,6 +5634,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!114 &1296306918
 MonoBehaviour:
@@ -8026,6 +8154,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!114 &1636738950
 MonoBehaviour:
@@ -8157,6 +8286,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!114 &1652993263
 MonoBehaviour:
@@ -8357,6 +8487,7 @@ MonoBehaviour:
   ItemAnim: {fileID: 0}
   dialogueScriptable: {fileID: 0}
   timesInteracted: 0
+  textBox: {fileID: 0}
   isItem: 0
 --- !u!1 &1693300564
 GameObject:
@@ -9537,6 +9668,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774807850}
     m_Modifications:
+    - target: {fileID: 5269694658407350156, guid: 52abf027abe3ed6499b5e8d824cd8c14,
+        type: 3}
+      propertyPath: qm
+      value: 
+      objectReference: {fileID: 774807851}
+    - target: {fileID: 5269694658407350156, guid: 52abf027abe3ed6499b5e8d824cd8c14,
+        type: 3}
+      propertyPath: questInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: a9fe8d37c0be42348a6092d0c37ebee7,
+        type: 2}
     - target: {fileID: 7742259817514230511, guid: 52abf027abe3ed6499b5e8d824cd8c14,
         type: 3}
       propertyPath: m_Name

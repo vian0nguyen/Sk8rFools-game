@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     public enum playerStates{
         isWalking,
-        isTalking
+        isTalking,
+        isFinishedTalking
     }
     public playerStates state;
 
@@ -63,11 +64,17 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space)){ 
                     gm.dm.GetCurrentNPC().SetTalkingState();
                     state = playerStates.isTalking;
+                    rb2d.velocity = Vector2.zero;
                 }
                 break;
             case playerStates.isTalking:
                 if (Input.GetKeyDown(KeyCode.Space)){ 
 
+                }
+                break;
+            case playerStates.isFinishedTalking:
+                if (Input.GetKeyDown(KeyCode.Space)){
+                    state = playerStates.isWalking;
                 }
                 break;
         }
@@ -116,9 +123,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        
-        if(col.gameObject.tag == "Item" && col.gameObject.TryGetComponent<InteractAnimationEvent>(out InteractAnimationEvent npc)){
-            gm.dm.talkableNPCS.Add(npc);
+
+        if (col.gameObject.tag == "Item" && col.gameObject.TryGetComponent<InteractAnimationEvent>(out InteractAnimationEvent npc)){
+            if (gm.dm.talkableNPCS.Contains(npc) == false)
+            {
+                gm.dm.talkableNPCS.Add(npc);
+            }
+            gm.dm.currentNPC = npc;
         }
     }
 
