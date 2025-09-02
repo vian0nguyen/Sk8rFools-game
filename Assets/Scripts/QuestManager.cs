@@ -57,15 +57,18 @@ public class QuestManager : MonoBehaviour
     public void StartQuest(string questID)
     {
         questDict[questID].QuestStart();
+        UpdateQuestDict();
     }
 
     public void ProgressQuest(string questID)
     {
         questDict[questID].ProgressQuest();
+        UpdateQuestDict();
     }
 
     public void CompleteQuest(string questID)
     {
         questDict[questID].QuestComplete();
+        UpdateQuestDict();
     }
 }

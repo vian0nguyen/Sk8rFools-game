@@ -6,8 +6,6 @@ using UnityEngine.Events;
 //quest states are changed via tags in ink
 public class QuestScript : MonoBehaviour
 {
-    [SerializeField]
-    private QuestManager qm;
 
     public QuestInfoScriptable questInfo;
     public enum questStatus{
@@ -29,19 +27,16 @@ public class QuestScript : MonoBehaviour
     {
         status = questStatus.InProgress;
         OnQuestStart.Invoke();
-        qm.UpdateQuestDict();
     }
 
     public virtual void ProgressQuest()
     {
         OnQuestProgress.Invoke();
-        qm.UpdateQuestDict();
     }
 
     public virtual void QuestComplete(){
         status = questStatus.Complete;
         OnQuestComplete.Invoke();
-        qm.UpdateQuestDict();
         gameObject.SetActive(false);
     }
 

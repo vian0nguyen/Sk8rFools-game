@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     //function for picking out dialogue based on what arc we're on
     public TextAsset ChooseArcDialogue(int timesInteracted){
-        if (gm.arc < currentNPC.dialogueScriptable.dialogueArcs.Length){
+        if (gm.arc < currentNPC.dialogueScriptable.dialogueArcs.Length - 1){
             return ChooseProgressionDialogue(currentNPC.dialogueScriptable.dialogueArcs[gm.arc], timesInteracted);
         }
 

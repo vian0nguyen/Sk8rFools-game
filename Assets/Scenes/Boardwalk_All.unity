@@ -3286,7 +3286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 271439889}
-  qm: {fileID: 0}
+  qm: {fileID: 774807851}
   inkJSONAsset: {fileID: 4900000, guid: d6cd584d300254856881db564ffd23a4, type: 3}
   storyBegin: 0
   currentText: 
@@ -3326,6 +3326,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Dialogue has ended!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 964183698}
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   Tags:
@@ -3399,6 +3410,21 @@ MonoBehaviour:
         - m_Target: {fileID: 774807849}
           m_MethodName: DebugMessage
           m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Quest Complete!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - marker: '&'
+    TagFunctions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774807849}
+          m_MethodName: RunKnot
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4870,6 +4896,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 271439889}
+  iH: {fileID: 774807849}
+  state: 0
   XSpeed: 5
   YSpeed: 5
   spriteRenderer: {fileID: 964183695}
@@ -4877,7 +4905,6 @@ MonoBehaviour:
   Qdirection: {x: 0, y: 0}
   velMag: 0
   QAnim: {fileID: 964183700}
-  state: 0
 --- !u!70 &964183699
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4949,7 +4976,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964183694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 186ba5b6f7b8c407d868459dab3eea67, type: 3}
   m_Name: 
@@ -4971,6 +4998,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1325484546}
     m_Modifications:
+    - target: {fileID: 343164635, guid: 5072f914fdd9a46e0a2370758d4e0dce, type: 3}
+      propertyPath: dialogueScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e3881ccd59928844af2153e5158168e,
+        type: 2}
     - target: {fileID: 343164637, guid: 5072f914fdd9a46e0a2370758d4e0dce, type: 3}
       propertyPath: inkStory
       value: 

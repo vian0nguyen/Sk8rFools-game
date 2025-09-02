@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     //OK so if we wanted to move Q using click interaction http://unity.grogansoft.com/move-player-to-clicktouch-position/
 
     public GameManager gm;
+    public InkHandler iH;
+    public enum playerStates{
+        isWalking,
+        isTalking,
+    }
+    public playerStates state;
 
     private Rigidbody2D rb2d;
     public float XSpeed;
@@ -23,12 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     PlayerPositionSave ppData;
 
-    public enum playerStates{
-        isWalking,
-        isTalking,
-        isFinishedTalking
-    }
-    public playerStates state;
+    
 
  /* public void Awake()
     {
@@ -61,20 +62,19 @@ public class PlayerMovement : MonoBehaviour
         
         switch (state){
             case playerStates.isWalking:
-                if (Input.GetKeyDown(KeyCode.Space)){ 
+                if (Input.GetKeyDown(KeyCode.Space) && gm.dm.currentNPC != null)
+                { 
                     gm.dm.GetCurrentNPC().SetTalkingState();
                     state = playerStates.isTalking;
                     rb2d.velocity = Vector2.zero;
+                    NPCDialogueScriptable npcDialogueData = gm.dm.GetCurrentNPC().dialogueScriptable;
+                    iH.inkJSONAsset = gm.dm.ChooseArcDialogue(gm.dm.currentNPC.timesInteracted);
+                    iH.Begin();
                 }
                 break;
             case playerStates.isTalking:
-                if (Input.GetKeyDown(KeyCode.Space)){ 
-
-                }
-                break;
-            case playerStates.isFinishedTalking:
                 if (Input.GetKeyDown(KeyCode.Space)){
-                    state = playerStates.isWalking;
+                    iH.RefreshView();
                 }
                 break;
         }
@@ -137,6 +137,18 @@ public class PlayerMovement : MonoBehaviour
         
         if(col.gameObject.tag == "Item" && col.gameObject.TryGetComponent<InteractAnimationEvent>(out InteractAnimationEvent npc)){
             gm.dm.talkableNPCS.Remove(npc);
+            
+            if(gm.dm.talkableNPCS.Count == 0)
+            {
+                gm.dm.currentNPC = null;
+            }
         }
+    }
+
+    public void ResetPlayer()
+    {
+        state = playerStates.isWalking;
+        gm.dm.GetCurrentNPC().textBox.text = "";
+        iH.ClearText();
     }
 }
