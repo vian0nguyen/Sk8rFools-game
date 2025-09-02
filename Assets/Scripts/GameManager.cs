@@ -36,4 +36,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(wait);
         fade.SetActive(false);
     }
+
+    //advances the storyline.  if you don't want to accidentally skip dialogue for this arc, add this tag into the very last dialgoue for this arc that you want the player to see
+    public void AdvanceArcs()
+    {
+        arc++;
+    }
 }
