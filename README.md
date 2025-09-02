@@ -16,6 +16,9 @@ this should _theoretically_ work..
 
 # Dev Diary
 
+### 25/09/01
+Stefan - Added arc-based dialogue system so we can have sets of dialogue (and a repeating dialogue) for each point in the story.
+
 ### 25/06/14
 Stefan - Added Y sorting to sprites so we don't have to do any funky sprite ordering in code.  Would like to add a reminder that to any new sprites that the player might potentially be in front of/behind to make sure the pivot to the sprite is towards the bottom Unity's sprite editor to prevent funkiness with the sorting.
 
